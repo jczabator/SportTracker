@@ -12,23 +12,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by cjbg on 23.07.2016.
  */
 var core_1 = require('@angular/core');
-var hero_1 = require('./hero');
-var HeroDetailComponent = (function () {
-    function HeroDetailComponent() {
+var workout_1 = require('../model/workout');
+var WorkoutDetailComponent = (function () {
+    function WorkoutDetailComponent() {
     }
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', (typeof (_a = typeof hero_1.Hero !== 'undefined' && hero_1.Hero) === 'function' && _a) || Object)
-    ], HeroDetailComponent.prototype, "hero", void 0);
-    HeroDetailComponent = __decorate([
+        __metadata('design:type', workout_1.Workout)
+    ], WorkoutDetailComponent.prototype, "workout", void 0);
+    WorkoutDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-hero-detail',
-            template: "\n\t<div *ngIf=\"hero\">\n\t\t<h2>{{hero.name}} details!</h2>\n\t\t<div><label>id: </label>{{hero.id}}</div>\n\t\t<div>\n\t\t<label>name: </label>\n\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\"/>\n\t\t</div>\n\t</div>\n\t"
+            selector: 'my-workout-detail',
+            template: "\n\t<div *ngIf=\"workout\">\n\t\t<h2>{{workout.exercise}} details!</h2>\n\t\t<div><label>date: </label>{{workout.date | date}}</div>\n\t\t<div>\n\t\t<label>weight: </label>\n\t\t<input [(ngModel)]=\"workout.weight\" placeholder=\"weight\"/>\n\t\t</div>\n\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [])
-    ], HeroDetailComponent);
-    return HeroDetailComponent;
-    var _a;
+    ], WorkoutDetailComponent);
+    return WorkoutDetailComponent;
 }());
-exports.HeroDetailComponent = HeroDetailComponent;
-//# sourceMappingURL=hero-detail.component.js.map
+exports.WorkoutDetailComponent = WorkoutDetailComponent;
+//# sourceMappingURL=workout-detail.component.js.map

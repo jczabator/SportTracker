@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<h2>{{sectionTitle}}</h2>
+<ul class="workouts">
+    <li *ngFor="let workout of workouts" 
+        [class.selected]="workout === selectedWorkout" 
+        (click)="onSelect(workout)">
+            <span class="badge">{{workout.date | date }}</span> {{workout.exercise}} {{workout.weight}}
+    </li>
+</ul>
+<my-workout-detail [workout]="selectedWorkout"></my-workout-detail>
