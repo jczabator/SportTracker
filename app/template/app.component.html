@@ -4,7 +4,9 @@
     <li *ngFor="let workout of workouts" 
         [class.selected]="workout === selectedWorkout" 
         (click)="onSelect(workout)">
-            <span class="badge">{{workout.date | date }}</span> {{workout.exercise}} {{workout.weight}}
+            <span class="badge">{{workout.date | date }}</span> 
+            {{workout.exercise}} 
+            {{workout.series[0].weight}}kg
     </li>
 </ul>
 <my-workout-detail [workout]="selectedWorkout"></my-workout-detail>
